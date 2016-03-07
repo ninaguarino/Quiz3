@@ -1,23 +1,38 @@
 package base;
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+
 public class TestTriangle {
-
-	@Test
-	public void TestgetArea() {
-		
-		TestTriangle TriArea = new Triange(1.0,1.0,1.0);
-		double expectedresult = 0.433;
-		double actualresult = TriArea.getArea();
-		assertEquals(toString,expectedresult, actualresult);
+	Triangle myTriangle;
 	
+	@Before
+	public void setUp() throws Exception{
+	 myTriangle = new Triangle(1.0,1.0,1.0);
 	}
+	
+	@After
+	public void tearDown() throws Exception{
+		myTriangle = null;
+	}
+	
+	
+	@Test
+	public void getAreaTest() {
+		assertTrue(myTriangle.getArea() == 0.5);
+		assertFalse(myTriangle.getArea() == 3.5);
+	}
+
 
 	@Test
-	public void TestgetPerimeter() {
-		fail("Not yet implemented");
+	public void getPerimeterTest1() {
+		assertTrue(myTriangle.getPerimeter() == 3.0);
+		assertFalse(myTriangle.getPerimeter() == 3.0);
 
 	}
+	
+
 }

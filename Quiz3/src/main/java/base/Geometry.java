@@ -1,16 +1,17 @@
+package base;
 
-public abstract class GeometricObject {
+public abstract class Geometry{
 	  private String color = "white";
 	  private boolean filled;
 	  private java.util.Date dateCreated;
 
 	  /** Construct a default geometric object */
-	  protected GeometricObject() {
+	  protected Geometry() {
 	    dateCreated = new java.util.Date();
 	  }
 
 	  /** Construct a geometric object with color and filled value */
-	  protected GeometricObject(String color, boolean filled) {
+	  protected Geometry(String color, boolean filled) {
 	    dateCreated = new java.util.Date();
 	    this.color = color;
 	    this.filled = filled;
