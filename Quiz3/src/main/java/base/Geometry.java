@@ -54,4 +54,9 @@ public abstract class Geometry{
 
 	  /** Abstract method getPerimeter */
 	  public abstract double getPerimeter();
+
+	public double getPerimiter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	}

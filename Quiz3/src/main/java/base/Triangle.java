@@ -48,16 +48,16 @@ public class Triangle extends Geometry {
 		
 		
 		// A method named getPerimeter() that returns the perimeter of this triangle.
+		@Override
 		public double getPerimiter(){
-			double perimiter = (side1 + side2 + side3);
-			return perimiter;
+			double Perimiter = (side1 + side2 + side3);
+			return Perimiter;
 		}
 		
 		// A method named getArea() that returns the area of this triangle.
 		@Override
 		public double getArea(){
-		    double perimeter = getPerimiter() / 2;
-		    return Math.sqrt(perimeter * ( (perimeter) * (perimeter - side2) * (perimeter - side3) ));
+		    return area;
 		}
 		
 		// A method named toString() that returns a string description for the triangle.		
@@ -66,11 +66,8 @@ public class Triangle extends Geometry {
 				      " and filled: " + isFilled());
 		}
 
-		@Override
-		public double getPerimeter() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
+
+
 
 
 	}
